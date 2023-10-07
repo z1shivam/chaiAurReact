@@ -7,7 +7,10 @@ function App() {
   const addValue = () => {
     if (counter < 20) {
       counter++;
-      setCounter(counter);
+      setCounter((prevCounter) => prevCounter+1);
+      setCounter((prevCounter) => prevCounter+1);
+      setCounter((prevCounter) => prevCounter+1);
+      // you get a callback in setCounter. it is a feature of react
     }
   };
 
