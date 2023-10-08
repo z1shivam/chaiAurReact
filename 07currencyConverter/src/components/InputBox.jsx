@@ -14,7 +14,7 @@ function InputBox({
   const amountInputId = useId();
 
   return (
-    <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
+    <div className={`bg-white p-3 rounded-lg text-sm flex`}>
       <div className="w-1/2">
         <label
           htmlFor={amountInputId}
@@ -30,7 +30,7 @@ function InputBox({
           disabled={amountDisable}
           value={amount}
           onChange={(e) =>
-            onAmountChange && onAmountChange(Number(e.target.value))
+            onAmountChange && Number(onAmountChange(e.target.value))
           }
         />
       </div>
@@ -39,7 +39,7 @@ function InputBox({
         <select
           className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
           value={selectCurrency}
-          onCurrencyChange={(e) => {
+          onChange={(e) => {
             onCurrencyChange && onCurrencyChange(e.target.value);
           }}
           disabled={currencyDisable}
