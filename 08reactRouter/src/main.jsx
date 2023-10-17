@@ -1,4 +1,3 @@
-import React, { createElement } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
@@ -35,8 +34,8 @@ const router = createBrowserRouter(
       <Route path='about' element= {<About />} />
       <Route path='contact' element= {<Contact />} />
       <Route path='user/:userid' element= {<User />} />
-      <Route 
-      path='github' 
+      <Route
+      path='github'
       element= {<Github />} />
     </Route>
   )
